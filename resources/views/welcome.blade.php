@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apotheosis: Path to Divinity - Premium Landing Page</title>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <!-- Custom CSS (Modular) -->
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/preloader.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sections.css') }}">
 </head>
 <body>
 
@@ -32,7 +35,9 @@
     @include('partials.footer')
     @include('partials.lightbox')
 
-    <!-- Custom JavaScript -->
-    <script src="{{ asset('js/custom.js') }}"></script>
+    <!-- Custom JavaScript (Modular) -->
+    <script src="{{ asset('js/canvas.js') }}"></script>
+    <script src="{{ asset('js/interactive.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
