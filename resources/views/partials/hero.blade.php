@@ -11,12 +11,14 @@
             <a href="#story" class="btn-secondary">Lihat Cerita</a>
         </div>
     </div>
-    <!-- Decorative Cultivation Seal -->
-    <svg class="hero-seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="90" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="10 5" />
-        <circle cx="100" cy="100" r="75" fill="none" stroke="#d4af37" stroke-width="1" />
-        <path d="M 100 25 A 75 75 0 0 0 100 175 A 37.5 37.5 0 0 0 100 100 A 37.5 37.5 0 0 1 100 25 Z" fill="#d4af37" fill-opacity="0.1" stroke="#d4af37" stroke-width="1" />
-        <circle cx="100" cy="62.5" r="8" fill="#d4af37" />
-        <circle cx="100" cy="137.5" r="8" fill="none" stroke="#d4af37" stroke-width="2" />
-    </svg>
+    <!-- Decorative Cultivation Seal Wrapper for 3D Parallax -->
+    <div class="hero-seal-wrapper">
+        <svg class="hero-seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="10 5" />
+            <circle cx="100" cy="100" r="75" fill="none" stroke="#d4af37" stroke-width="1" />
+            <path d="M 100 25 A 75 75 0 0 0 100 175 A 37.5 37.5 0 0 0 100 100 A 37.5 37.5 0 0 1 100 25 Z" fill="#d4af37" fill-opacity="0.1" stroke="#d4af37" stroke-width="1" />
+            <circle cx="100" cy="62.5" r="8" fill="#d4af37" />
+            <circle cx="100" cy="137.5" r="8" fill="none" stroke="#d4af37" stroke-width="2" />
+        </svg>
+    </div>
 </section>

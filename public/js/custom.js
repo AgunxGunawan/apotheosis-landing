@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. Character Database Search
     initRegistrySearch();
+
+    // 10. Premium 3D Effects
+    initHeroParallax();
+    init3DTilt();
 });
 
 // Canvas Particle System
@@ -634,5 +638,81 @@ function initPreloader() {
             // Restore scrolling
             document.body.style.overflow = '';
         }, 1000);
+    });
+}
+
+// 3D Mouse Parallax Effect for Hero Section
+function initHeroParallax() {
+    const hero = document.getElementById('hero');
+    const content = document.querySelector('.hero-content');
+    const sealWrapper = document.querySelector('.hero-seal-wrapper');
+    if (!hero) return;
+
+    hero.addEventListener('mousemove', (e) => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const mouseX = e.clientX - width / 2;
+        const mouseY = e.clientY - height / 2;
+
+        // Shift background slightly (3D depth look)
+        const bgX = (mouseX / width) * -35;
+        const bgY = (mouseY / height) * -35;
+        hero.style.backgroundPosition = `calc(50% + ${bgX}px) calc(50% + ${bgY}px)`;
+
+        // Shift content in opposite direction
+        if (content) {
+            const contentX = (mouseX / width) * 20;
+            const contentY = (mouseY / height) * 20;
+            content.style.transform = `translate(${contentX}px, ${contentY}px)`;
+        }
+
+        // Translate and tilt seal wrapper
+        if (sealWrapper) {
+            const sealX = (mouseX / width) * -40;
+            const sealY = (mouseY / height) * -40;
+            const tiltX = (mouseY / height) * 25; // max 25 degrees
+            const tiltY = (mouseX / width) * -25;
+            sealWrapper.style.transform = `translateY(-50%) translate(${sealX}px, ${sealY}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        }
+    });
+
+    // Reset positions on leave
+    hero.addEventListener('mouseleave', () => {
+        hero.style.backgroundPosition = '';
+        if (content) content.style.transform = '';
+        if (sealWrapper) sealWrapper.style.transform = 'translateY(-50%)';
+    });
+}
+
+// 3D Card Hover Tilt Effect (Arsenal & Registry Cards)
+function init3DTilt() {
+    const cards = document.querySelectorAll('.arsenal-card, .registry-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            // Calculate rotation degrees (max 10deg)
+            const rotateX = ((centerY - y) / centerY) * 10;
+            const rotateY = ((x - centerX) / centerX) * 10;
+
+            // Detect card offset requirements
+            const translateOffset = card.classList.contains('arsenal-card') ? '-8px' : '-5px';
+
+            // Real-time smooth tracking transition
+            card.style.transition = 'transform 0.1s ease-out, border-color 0.4s, box-shadow 0.4s';
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(${translateOffset})`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            // Restore default styles
+            card.style.transition = '';
+            card.style.transform = '';
+        });
     });
 }
