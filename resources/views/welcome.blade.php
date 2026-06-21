@@ -6,10 +6,10 @@
     <title>Apotheosis: Path to Divinity - Premium Landing Page</title>
     
     <!-- Custom CSS (Modular) -->
-    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/preloader.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/sections.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}?v=1.1">
+    <link rel="stylesheet" href="{{ asset('css/preloader.css') }}?v=1.1">
+    <link rel="stylesheet" href="{{ asset('css/layout.css') }}?v=1.1">
+    <link rel="stylesheet" href="{{ asset('css/sections.css') }}?v=1.1">
 </head>
 <body>
 
@@ -36,8 +36,8 @@
     @include('partials.lightbox')
 
     <!-- Custom JavaScript (Modular) -->
-    <script src="{{ asset('js/canvas.js') }}"></script>
-    <script src="{{ asset('js/interactive.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/canvas.js') }}?v=1.1"></script>
+    <script src="{{ asset('js/interactive.js') }}?v=1.1"></script>
+    <script src="{{ asset('js/main.js') }}?v=1.1"></script>
 </body>
 </html>
