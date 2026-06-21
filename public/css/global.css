@@ -149,3 +149,9 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Premium Mobile Tap Feedback */
+button:active, .btn-primary:active, .btn-secondary:active, .char-nav-btn:active, .video-nav-btn:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease;
+}
