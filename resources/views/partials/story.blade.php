@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="story-media">
-                    <img src="{{ asset('assets/images/bg_mountains.jpg') }}" alt="Season 1 Cover">
+                    <img src="{{ asset('assets/images/story/season1.png') }}" alt="Season 1 Cover">
                     <span class="story-badge">Awal Kultivasi</span>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     </ul>
                 </div>
                 <div class="story-media">
-                    <img src="{{ asset('assets/images/bg_ice.jpg') }}" alt="Season 2 Cover">
+                    <img src="{{ asset('assets/images/story/season2.jpg') }}" alt="Season 2 Cover">
                     <span class="story-badge">Perang Besar</span>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     </ul>
                 </div>
                 <div class="story-media">
-                    <img src="{{ asset('assets/images/bg_gold.jpg') }}" alt="Season 3 Cover">
+                    <img src="{{ asset('assets/images/story/season3.jpg') }}" alt="Season 3 Cover">
                     <span class="story-badge">Melampaui Dewa</span>
                 </div>
             </div>
