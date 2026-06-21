@@ -10,7 +10,7 @@
         <div class="arsenal-grid">
             <!-- Artifact 1 -->
             <div class="arsenal-card">
-                <div class="arsenal-img-container" style="background-image: url('{{ asset('assets/images/bg_gold.jpg') }}')">
+                <div class="arsenal-img-container" style="background-image: url('{{ asset('assets/images/weapons/cauldron.png') }}')">
                     <div class="arsenal-img-overlay"></div>
                     <span class="arsenal-type">Relik Surga</span>
                 </div>
@@ -26,7 +26,7 @@
 
             <!-- Artifact 2 -->
             <div class="arsenal-card">
-                <div class="arsenal-img-container" style="background-image: url('{{ asset('assets/images/bg_hero.jpg') }}')">
+                <div class="arsenal-img-container" style="background-image: url('{{ asset('assets/images/weapons/black_sword.png') }}')">
                     <div class="arsenal-img-overlay"></div>
                     <span class="arsenal-type">Senjata Jiwa</span>
                 </div>
@@ -42,7 +42,7 @@
 
             <!-- Artifact 3 -->
             <div class="arsenal-card">
-                <div class="arsenal-img-container" style="background-image: url('{{ asset('assets/images/bg_ice.jpg') }}')">
+                <div class="arsenal-img-container" style="background-image: url('{{ asset('assets/images/weapons/ice_sword.png') }}')">
                     <div class="arsenal-img-overlay"></div>
                     <span class="arsenal-type">Sekte Harta</span>
                 </div>
