@@ -181,7 +181,6 @@
 
         <div class="character-grid">
             <!-- Navigation Tabs -->
-            <div class="character-nav">
                 <button class="char-nav-btn active" data-character="luo_zheng">
                     <div class="char-btn-info">
                         <span class="char-btn-name">Luo Zheng</span>
@@ -224,6 +223,20 @@
                     </div>
                     <span class="char-btn-symbol">🔥</span>
                 </button>
+                <button class="char-nav-btn" data-character="xun">
+                    <div class="char-btn-info">
+                        <span class="char-btn-name">Xun</span>
+                        <span class="char-btn-title">Fiend Queen</span>
+                    </div>
+                    <span class="char-btn-symbol">⚔</span>
+                </button>
+                <button class="char-nav-btn" data-character="mu_mingxue">
+                    <div class="char-btn-info">
+                        <span class="char-btn-name">Mu Mingxue</span>
+                        <span class="char-btn-title">Divine Saint</span>
+                    </div>
+                    <span class="char-btn-symbol">✨</span>
+                </button>
             </div>
 
             <!-- Display Codex Content -->
@@ -255,10 +268,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="char-media-container theme-luo_zheng">
+                    <div class="char-media-container theme-luo_zheng" data-char="luo_zheng" data-videos="video.mp4" data-current-index="0">
                         <video class="char-video" loop muted playsinline>
                             <source src="public/assets/videos/characters/luo_zheng/video.mp4" type="video/mp4">
                         </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn" style="display:none;">◀</button>
+                            <button class="video-nav-btn next-btn" style="display:none;">▶</button>
+                        </div>
                         <button class="sound-toggle-btn" aria-label="Toggle Sound">
                             <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -304,10 +321,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="char-media-container theme-ning_yudie">
+                    <div class="char-media-container theme-ning_yudie" data-char="ning_yudie" data-videos="video.mp4,video_1.mp4" data-current-index="0">
                         <video class="char-video" loop muted playsinline>
                             <source src="public/assets/videos/characters/ning_yudie/video.mp4" type="video/mp4">
                         </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn">◀</button>
+                            <button class="video-nav-btn next-btn">▶</button>
+                        </div>
                         <button class="sound-toggle-btn" aria-label="Toggle Sound">
                             <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -353,10 +374,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="char-media-container theme-yun_luo">
+                    <div class="char-media-container theme-yun_luo" data-char="yun_luo" data-videos="video.mp4,video_1.mp4,video_2.mp4" data-current-index="0">
                         <video class="char-video" loop muted playsinline>
                             <source src="public/assets/videos/characters/yun_luo/video.mp4" type="video/mp4">
                         </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn">◀</button>
+                            <button class="video-nav-btn next-btn">▶</button>
+                        </div>
                         <button class="sound-toggle-btn" aria-label="Toggle Sound">
                             <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -402,10 +427,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="char-media-container theme-su_lingyun">
+                    <div class="char-media-container theme-su_lingyun" data-char="su_lingyun" data-videos="video.mp4,video_1.mp4" data-current-index="0">
                         <video class="char-video" loop muted playsinline>
                             <source src="public/assets/videos/characters/su_lingyun/video.mp4" type="video/mp4">
                         </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn">◀</button>
+                            <button class="video-nav-btn next-btn">▶</button>
+                        </div>
                         <button class="sound-toggle-btn" aria-label="Toggle Sound">
                             <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -451,10 +480,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="char-media-container theme-tianqiong">
+                    <div class="char-media-container theme-tianqiong" data-char="tianqiong" data-videos="video.mp4,video_1.mp4" data-current-index="0">
                         <video class="char-video" loop muted playsinline>
                             <source src="public/assets/videos/characters/tianqiong/video.mp4" type="video/mp4">
                         </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn">◀</button>
+                            <button class="video-nav-btn next-btn">▶</button>
+                        </div>
                         <button class="sound-toggle-btn" aria-label="Toggle Sound">
                             <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -500,10 +533,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="char-media-container theme-huo_yuner">
+                    <div class="char-media-container theme-huo_yuner" data-char="huo_yuner" data-videos="video.mp4,video_1.mp4" data-current-index="0">
                         <video class="char-video" loop muted playsinline>
                             <source src="public/assets/videos/characters/huo_yuner/video.mp4" type="video/mp4">
                         </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn">◀</button>
+                            <button class="video-nav-btn next-btn">▶</button>
+                        </div>
                         <button class="sound-toggle-btn" aria-label="Toggle Sound">
                             <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -517,6 +554,112 @@
                         </button>
                         <div class="char-video-fallback" style="background-image: url('public/assets/images/bg_hero.jpg')">
                             <i>🔥</i>
+                            <span>Upload Portrait Video (video.mp4)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xun -->
+                <div class="char-pane" id="char-xun">
+                    <div class="char-details">
+                        <h3>Xun (熏)</h3>
+                        <span class="char-identity">Fiend Queen</span>
+                        <p class="char-desc">
+                            Ratu dari Klan Fiend yang bersemayam sebagai roh pedang di dalam Pedang Hitam Luo Zheng. Ia membimbing Luo Zheng dalam menguasai Hukum Pembantaian.
+                        </p>
+                        <div class="char-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Cultivation Level</span>
+                                <span class="stat-val">Divine Sea</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Weapon / Element</span>
+                                <span class="stat-val">Black Sword & Slaughter Laws</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance</span>
+                                <span class="stat-val">Donghua Ep 18</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Aura Color</span>
+                                <span class="stat-val">Dark Red & Black</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="char-media-container theme-xun" data-char="xun" data-videos="video.mp4" data-current-index="0">
+                        <video class="char-video" loop muted playsinline>
+                            <source src="public/assets/videos/characters/xun/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn" style="display:none;">◀</button>
+                            <button class="video-nav-btn next-btn" style="display:none;">▶</button>
+                        </div>
+                        <button class="sound-toggle-btn" aria-label="Toggle Sound">
+                            <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <line x1="23" y1="9" x2="17" y2="15"></line>
+                                <line x1="17" y1="9" x2="23" y2="15"></line>
+                            </svg>
+                            <svg class="sound-icon-unmuted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            </svg>
+                        </button>
+                        <div class="char-video-fallback" style="background-image: url('public/assets/images/bg_hero.jpg')">
+                            <i>⚔</i>
+                            <span>Upload Portrait Video (video.mp4)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mu Mingxue -->
+                <div class="char-pane" id="char-mu_mingxue">
+                    <div class="char-details">
+                        <h3>Mu Mingxue (沐茗雪)</h3>
+                        <span class="char-identity">Divine Saint</span>
+                        <p class="char-desc">
+                            Seorang saintes agung dengan kekuatan cahaya murni yang menjadi salah satu sosok terkuat di dunianya.
+                        </p>
+                        <div class="char-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Cultivation Level</span>
+                                <span class="stat-val">Divine Realm</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Weapon / Element</span>
+                                <span class="stat-val">Light Laws</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance</span>
+                                <span class="stat-val">Donghua Season 3</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Aura Color</span>
+                                <span class="stat-val">White & Silver</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="char-media-container theme-mu_mingxue" data-char="mu_mingxue" data-videos="video.mp4,video_1.mp4" data-current-index="0">
+                        <video class="char-video" loop muted playsinline>
+                            <source src="public/assets/videos/characters/mu_mingxue/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-slider-controls">
+                            <button class="video-nav-btn prev-btn">◀</button>
+                            <button class="video-nav-btn next-btn">▶</button>
+                        </div>
+                        <button class="sound-toggle-btn" aria-label="Toggle Sound">
+                            <svg class="sound-icon-muted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <line x1="23" y1="9" x2="17" y2="15"></line>
+                                <line x1="17" y1="9" x2="23" y2="15"></line>
+                            </svg>
+                            <svg class="sound-icon-unmuted" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            </svg>
+                        </button>
+                        <div class="char-video-fallback" style="background-image: url('public/assets/images/bg_hero.jpg')">
+                            <i>✨</i>
                             <span>Upload Portrait Video (video.mp4)</span>
                         </div>
                     </div>

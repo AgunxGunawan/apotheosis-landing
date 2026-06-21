@@ -478,6 +478,45 @@ section {
     z-index: 2;
 }
 
+/* Video Slider Controls */
+.video-slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.video-nav-btn {
+    background: rgba(7, 7, 10, 0.75);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--gold-primary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    pointer-events: auto;
+}
+
+.video-nav-btn:hover {
+    background: var(--gold-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px var(--gold-glow);
+    transform: scale(1.1);
+    border-color: var(--gold-primary);
+}
+
 /* Sound Toggle Button */
 .sound-toggle-btn {
     position: absolute;

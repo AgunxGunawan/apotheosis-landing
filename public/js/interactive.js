@@ -53,6 +53,9 @@ function initCharacterCodex() {
 
     // Initialize sound toggle controls
     initCharacterSound();
+
+    // Initialize Video Slider controls
+    initVideoSlider();
 }
 
 // Cauldron Interactive Nodes
@@ -319,5 +322,70 @@ function initCharacterSound() {
             }
         }
     }
+}
+
+// Character Video Slider Controller
+function initVideoSlider() {
+    const mediaContainers = document.querySelectorAll('.char-media-container');
+
+    mediaContainers.forEach(container => {
+        const videosStr = container.getAttribute('data-videos');
+        if (!videosStr) return;
+
+        const videos = videosStr.split(',');
+        const controls = container.querySelector('.video-slider-controls');
+        
+        if (videos.length <= 1) {
+            if (controls) controls.style.display = 'none';
+            return;
+        } else {
+            if (controls) controls.style.display = 'flex';
+        }
+
+        const charId = container.getAttribute('data-char');
+        const videoElement = container.querySelector('video');
+        if (!videoElement) return;
+        const sourceElement = videoElement.querySelector('source');
+        if (!sourceElement) return;
+        const prevBtn = container.querySelector('.prev-btn');
+        const nextBtn = container.querySelector('.next-btn');
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                let currentIndex = parseInt(container.getAttribute('data-current-index')) || 0;
+                currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+                container.setAttribute('data-current-index', currentIndex);
+                changeVideo(currentIndex);
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                let currentIndex = parseInt(container.getAttribute('data-current-index')) || 0;
+                currentIndex = (currentIndex + 1) % videos.length;
+                container.setAttribute('data-current-index', currentIndex);
+                changeVideo(currentIndex);
+            });
+        }
+
+        function changeVideo(index) {
+            const newSrc = `public/assets/videos/characters/${charId}/${videos[index]}`;
+            const wasPlaying = !videoElement.paused;
+            
+            sourceElement.src = newSrc;
+            videoElement.load();
+            videoElement.muted = isVideoMuted;
+            
+            // Try to play if it was playing before, or if it's the active pane
+            const pane = container.closest('.char-pane');
+            if (wasPlaying || (pane && pane.classList.contains('active'))) {
+                videoElement.play().catch(err => {
+                    console.log('Video play interrupted: ', err);
+                });
+            }
+        }
+    });
 }
 
